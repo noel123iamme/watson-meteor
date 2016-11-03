@@ -1,0 +1,13 @@
+/* CSS declarations go here */
+pre #profile {
+	/*max-height: 50vw;*/
+	max-height: 50vw;
+}
+
+#behaviors {
+	text-align: justify;
+}
+
+#sunburstChart {
+	max-height: 50vw;
+}

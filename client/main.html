@@ -1,0 +1,54 @@
+<head>
+  <title>watson-meteor</title>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.14/d3.min.js"></script>
+    <script src="https://rawgit.com/personality-insights/behaviors/master/dist/personality-behaviors.js"></script>
+    <script src="https://rawgit.com/ibm-silvergate/personality-sunburst-chart/master/bin/personality-sunburst-chart.standalone.js"></script>  
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="main.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container">
+    {{> watson}}
+  </div>
+</body>
+
+<template name="watson">
+    <h1>Behaviors for Personality Insights</h1>
+    <p class="lead">Use it to discover behaviors from a Personality Insights profile.</p>
+    <div class="row">
+      <div class="col-sm-6 col-xs-12">
+        <h2>Personality Sunburst Chart</h2>
+        <div id="sunburstChart">{{sunburstChart}}</div>
+      </div>
+      <div class="col-sm-6 col-xs-12">
+        <h2>Personality Profile</h2>
+        <div><pre id="profile">{{profile}}</pre></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>Behavior Cards</h2>
+        <div id="behaviors">
+          {{#each behaviors}}
+            {{> behavior}}
+          {{/each}}
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <pre id="personality">
+          {{personality}}
+        </pre>
+      </div>
+    </div>
+</template>
+
+<template name="behavior">
+  <div class="well">
+    <p> A <strong>{{name}}</strong> is likely to <strong>{{verb}}</strong>.</p>
+    <p> <strong>Who is likely to manifest this behavior?</strong><br/>{{description}}</p>
+  </div> 
+</template>

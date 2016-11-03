@@ -1,0 +1,14 @@
+{
+  "name": "watson-meteor",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "marked": "^0.3.6",
+    "meteor-node-stubs": "^0.2.3",
+    "remove-markdown": "^0.1.0",
+    "underscore": "^1.8.3",
+    "watson-developer-cloud": "^2.8.1"
+  }
+}
